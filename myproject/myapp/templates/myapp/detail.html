@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        background-color: #f9f9f9;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      .detail-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .detail-row {
+        margin-bottom: 15px;
+      }
+      .label {
+        font-weight: bold;
+        color: #555;
+      }
+      .value {
+        margin-left: 10px;
+        color: #000;
+      }
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #007bff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Todo Details</h2>
+    <div class="detail-box">
+      <div class="detail-row">
+        <span class="label">Name:</span>
+        <span class="value">{{ todo.name }}</span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Email:</span>
+        <span class="value">{{ todo.email }}</span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Age:</span>
+        <span class="value">{{ todo.age }}</span>
+      </div>
+      <div class="detail-row">
+        <span class="label">Deadline:</span>
+        <span class="value">{{ todo.deadline }}</span>
+      </div>
+      <a href="{% url 'todo_list' %}">← Back to Todo List</a>
+    </div>
+  </body>
+</html>
